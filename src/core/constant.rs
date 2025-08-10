@@ -110,6 +110,12 @@ def_const_models!(
 
     // OpenAI 模型
     O3 => "o3",
+    GPT_5 => "gpt-5",
+    GPT_5_HIGH => "gpt-5-high",
+    GPT_5_LOW => "gpt-5-low",
+    GPT_5_FAST => "gpt-5-fast",
+    GPT_5_HIGH_FAST => "gpt-5-high-fast",
+    GPT_5_LOW_FAST => "gpt-5-low-fast",
     GPT_4_1 => "gpt-4.1",
     GPT_4O => "gpt-4o",
     O4_MINI => "o4-mini",
@@ -578,6 +584,12 @@ create_models! {
 
     OPENAI => [
         ModelIds::new("o3"),
+        ModelIds::new("gpt-5"),
+        ModelIds::new("gpt-5-high"),
+        ModelIds::new("gpt-5-low"),
+        ModelIds::new("gpt-5-fast"),
+        ModelIds::new("gpt-5-high-fast"),
+        ModelIds::new("gpt-5-low-fast"),
         ModelIds::new("gpt-4.1"),
         ModelIds::new("gpt-4o"),
         ModelIds::new("o4-mini"),
@@ -633,10 +645,16 @@ pub(super) const LONG_CONTEXT_MODELS: [&str; 4] = [
 ];
 
 // 支持思考的模型
-const SUPPORTED_THINKING_MODELS: [&str; 10] = [
+const SUPPORTED_THINKING_MODELS: [&str; 15] = [
     CLAUDE_4_OPUS_THINKING,
     CLAUDE_4_SONNET_THINKING,
     O3,
+    GPT_5,
+    GPT_5_HIGH,
+    GPT_5_LOW,
+    GPT_5_FAST,
+    GPT_5_HIGH_FAST,
+    GPT_5_LOW_FAST,
     GEMINI_2_5_PRO_PREVIEW_05_06,
     GEMINI_2_5_FLASH_PREVIEW_05_20,
     CLAUDE_3_7_SONNET_THINKING,
@@ -647,7 +665,7 @@ const SUPPORTED_THINKING_MODELS: [&str; 10] = [
 ];
 
 // 支持图像的模型（DEFAULT 始终支持）
-const SUPPORTED_IMAGE_MODELS: [&str; 18] = [
+const SUPPORTED_IMAGE_MODELS: [&str; 24] = [
     DEFAULT,
     CLAUDE_4_OPUS_THINKING,
     CLAUDE_4_OPUS,
@@ -655,6 +673,12 @@ const SUPPORTED_IMAGE_MODELS: [&str; 18] = [
     CLAUDE_4_SONNET,
     CLAUDE_3_5_SONNET,
     O3,
+    GPT_5,
+    GPT_5_HIGH,
+    GPT_5_LOW,
+    GPT_5_FAST,
+    GPT_5_HIGH_FAST,
+    GPT_5_LOW_FAST,
     GEMINI_2_5_PRO_PREVIEW_05_06,
     GEMINI_2_5_FLASH_PREVIEW_05_20,
     GPT_4_1,
@@ -669,11 +693,17 @@ const SUPPORTED_IMAGE_MODELS: [&str; 18] = [
 ];
 
 // 支持Max与非Max的模型
-const SUPPORTED_MAX_MODELS: [&str; 13] = [
+const SUPPORTED_MAX_MODELS: [&str; 19] = [
     CLAUDE_4_SONNET_THINKING,
     CLAUDE_4_SONNET,
     CLAUDE_3_5_SONNET,
     O3,
+    GPT_5,
+    GPT_5_HIGH,
+    GPT_5_LOW,
+    GPT_5_FAST,
+    GPT_5_HIGH_FAST,
+    GPT_5_LOW_FAST,
     GEMINI_2_5_PRO_PREVIEW_05_06,
     GEMINI_2_5_FLASH_PREVIEW_05_20,
     GPT_4_1,
