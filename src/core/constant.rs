@@ -645,7 +645,7 @@ pub(super) const LONG_CONTEXT_MODELS: [&str; 4] = [
 ];
 
 // 支持思考的模型
-const SUPPORTED_THINKING_MODELS: [&str; 15] = [
+const SUPPORTED_THINKING_MODELS: [&str; 16] = [
     CLAUDE_4_OPUS_THINKING,
     CLAUDE_4_SONNET_THINKING,
     O3,
