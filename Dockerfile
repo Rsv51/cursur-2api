@@ -22,3 +22,5 @@ EXPOSE ${PORT}
 USER 1001
 
 ENTRYPOINT ["/app/cursor-api"]
+
+COPY ../.env /app/.env
