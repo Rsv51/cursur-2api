@@ -1,7 +1,7 @@
-name: Push to ghcr.io
+name: Build & Push to ghcr.io
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]   # 如仓库默认分支为 master，改为 master
   workflow_dispatch:      # 允许手动触发
 
 jobs:
@@ -17,10 +17,11 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}   # 自动具备写权限
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v5
         with:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/rsv51/cursur-2api:latest
+          tags: |
+            ghcr.io/rsv51/cursur-2api:latest
